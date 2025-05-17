@@ -1,9 +1,6 @@
-import { InvalidParamError } from '../../errors/invalid-params-error'
-import { MissingParamError } from '../../errors/missing-params-errors'
+import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
 import { SignUpController } from './signup'
-import { describe, it, expect } from '@jest/globals'
 import { EmailValidator } from '../controllers/protocols/email-validator'
-import { ServerError } from '../../errors/server-error'
 
 interface SutTypes {
   sut: SignUpController,
