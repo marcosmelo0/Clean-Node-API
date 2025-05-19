@@ -1,4 +1,18 @@
+import { Encrypter } from '../../protocols/encrypter'
 import { DbAddAccount } from './db-add-account'
+
+interface SutTypes {
+  sut: DbAddAccount
+  encrypterStub: Encrypter
+}
+
+const makeSut = (): SutTypes => {
+  const { sut, encrypterStub } = makeSut()
+  return {
+    sut,
+    encrypterStub
+  }
+}
 
 describe('DbAddAccount Usecase', () => {
   test('Should call Encrypter with correct password', async () => {
