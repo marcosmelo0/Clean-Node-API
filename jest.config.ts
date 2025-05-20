@@ -11,6 +11,7 @@ const config: Config = {
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   coverageProvider: 'v8',
+  preset: '@shelf/jest-mongodb',
   transform: {
     '.+\\.ts$': 'ts-jest'
   }
